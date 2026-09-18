@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - CAPACITY CONNECT</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #eef5ff, #f8fbff);
+            font-family: Arial, sans-serif;
+        }
+
+        .login-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 15px;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 450px;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .logo-icon {
+            width: 75px;
+            height: 75px;
+            background: #0d6efd;
+            color: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            font-size: 38px;
+        }
+
+        .form-control {
+            padding: 13px;
+            border-radius: 10px;
+        }
+
+        .btn-login {
+            padding: 13px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .role-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .role-card:hover {
+            border-color: #0d6efd;
+            background: #f3f8ff;
+        }
+
+        .role-card.selected {
+            border-color: #0d6efd;
+            background: #e8f2ff;
+        }
+
+        .role-card i {
+            font-size: 28px;
+            color: #0d6efd;
+        }
+
+        .back-home {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="login-wrapper">
+
+    <div class="login-card">
+
+        <!-- Logo -->
+        <div class="text-center">
+
+            <div class="logo-icon">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+
+            <h2 class="fw-bold mt-3">
+                CAPACITY CONNECT
+            </h2>
+
+            <p class="text-secondary">
+                Sign in to continue learning
+            </p>
+
+        </div>
+
+
+        <!-- Login Form -->
+        <form id="loginForm">
+
+            <!-- Role -->
+            <div class="mb-4">
+
+                <label class="form-label fw-bold">
+                    Select Your Role
+                </label>
+
+                <div class="row g-2">
+
+                    <!-- Trainee -->
+                    <div class="col-4">
+
+                        <div
+                            class="role-card"
+                            onclick="selectRole('Trainee', this)"
+                        >
+
+                            <i class="bi bi-person-video3"></i>
+
+                            <div class="mt-2">
+                                Trainee
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Trainer -->
+                    <div class="col-4">
+
+                        <div
+                            class="role-card"
+                            onclick="selectRole('Trainer', this)"
+                        >
+
+                            <i class="bi bi-person-workspace"></i>
+
+                            <div class="mt-2">
+                                Trainer
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Admin -->
+                    <div class="col-4">
+
+                        <div
+                            class="role-card"
+                            onclick="selectRole('Admin', this)"
+                        >
+
+                            <i class="bi bi-speedometer2"></i>
+
+                            <div class="mt-2">
+                                Admin
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <input
+                    type="hidden"
+                    id="selectedRole"
+                    value=""
+                >
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="mb-3">
+
+                <label class="form-label fw-bold">
+                    Email Address
+                </label>
+
+                <div class="input-group">
+
+                    <span class="input-group-text">
+                        <i class="bi bi-envelope"></i>
+                    </span>
+
+                    <input
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Password -->
+            <div class="mb-3">
+
+                <label class="form-label fw-bold">
+                    Password
+                </label>
+
+                <div class="input-group">
+
+                    <span class="input-group-text">
+                        <i class="bi bi-lock"></i>
+                    </span>
+
+                    <input
+                        type="password"
+                        id="password"
+                        class="form-control"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Remember / Forgot -->
+            <div class="d-flex justify-content-between mb-4">
+
+                <div>
+
+                    <input
+                        type="checkbox"
+                        id="remember"
+                    >
+
+                    <label for="remember">
+                        Remember me
+                    </label>
+
+                </div>
+
+                <a href="#" class="text-primary">
+                    Forgot Password?
+                </a>
+
+            </div>
+
+
+            <!-- Login Button -->
+            <button
+                type="submit"
+                class="btn btn-primary w-100 btn-login"
+            >
+
+                <i class="bi bi-box-arrow-in-right"></i>
+                Login
+
+            </button>
+
+        </form>
+
+
+        <!-- Demo Information -->
+        <div class="alert alert-info mt-4">
+
+            <strong>Demo Login</strong>
+
+            <br>
+
+            Select a role and enter any email/password
+            for this frontend prototype.
+
+        </div>
+
+
+        <!-- Back -->
+        <div class="text-center mt-3">
+
+            <a
+                href="index.html"
+                class="back-home text-primary"
+            >
+
+                <i class="bi bi-arrow-left"></i>
+                Back to Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    let selectedRole = "";
+
+
+    function selectRole(role, element) {
+
+        selectedRole = role;
+
+        document.getElementById("selectedRole").value = role;
+
+        // Remove selected class from all roles
+        document.querySelectorAll(".role-card")
+            .forEach(card => {
+                card.classList.remove("selected");
+            });
+
+        // Add selected class
+        element.classList.add("selected");
+
+    }
+
+
+    document.getElementById("loginForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const email =
+                document.getElementById("email").value;
+
+            const password =
+                document.getElementById("password").value;
+
+
+            if (selectedRole === "") {
+
+                alert("Please select your role.");
+
+                return;
+
+            }
+
+
+            if (email === "" || password === "") {
+
+                alert("Please enter email and password.");
+
+                return;
+
+            }
+
+
+           // Redirect user based on selected role
+
+if (selectedRole === "Trainee") {
+    window.location.href = "trainee.html";
+}
+
+else if (selectedRole === "Trainer") {
+    window.location.href = "trainer.html";
+}
+
+else if (selectedRole === "Admin") {
+    window.location.href = "admin.html";
+}
+
+
+            // Dashboard will be connected later
+            console.log(
+                "Logged in as:",
+                selectedRole,
+                email
+            );
+
+        });
+
+</script>
+
+
+</body>
+</html>

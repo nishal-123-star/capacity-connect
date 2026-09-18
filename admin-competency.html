@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Competency Mapping - CAPACITY CONNECT</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f5f7fb;
+            font-family: Arial, sans-serif;
+        }
+
+        .topbar {
+            background: white;
+            padding: 18px 30px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .stat-card,
+        .table-card,
+        .competency-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+
+        .stat-icon {
+            font-size: 30px;
+            color: #0d6efd;
+        }
+
+        .competency-icon {
+            font-size: 40px;
+            color: #0d6efd;
+        }
+
+        .progress {
+            height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar d-flex justify-content-between align-items-center">
+
+        <div class="brand">
+            <i class="bi bi-mortarboard-fill"></i>
+            CAPACITY CONNECT
+        </div>
+
+        <a href="admin.html" class="btn btn-outline-primary">
+            <i class="bi bi-arrow-left"></i>
+            Back to Admin Dashboard
+        </a>
+
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <div class="mb-4">
+            <h2>Competency Mapping</h2>
+
+            <p class="text-muted">
+                Monitor competencies, identify skill gaps and support trainer matching.
+            </p>
+        </div>
+
+
+        <!-- Statistics -->
+        <div class="row g-4 mb-4">
+
+            <div class="col-md-3">
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+
+                    <h3>18</h3>
+                    <p class="text-muted mb-0">
+                        Competencies
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <h3>48</h3>
+                    <p class="text-muted mb-0">
+                        Trainees Assessed
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-exclamation-triangle"></i>
+                    </div>
+
+                    <h3>21</h3>
+                    <p class="text-muted mb-0">
+                        Skill Gaps
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-person-check"></i>
+                    </div>
+
+                    <h3>15</h3>
+                    <p class="text-muted mb-0">
+                        Trainer Matches
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Competency Areas -->
+        <h4 class="mb-3">
+            Competency Areas
+        </h4>
+
+        <div class="row g-4 mb-4">
+
+            <div class="col-md-4">
+
+                <div class="competency-card">
+
+                    <div class="competency-icon mb-3">
+                        <i class="bi bi-bar-chart-fill"></i>
+                    </div>
+
+                    <h5>Data Analytics</h5>
+
+                    <p class="text-muted">
+                        Data analysis, visualization and analytical thinking.
+                    </p>
+
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Average Competency</span>
+                        <strong>68%</strong>
+                    </div>
+
+                    <div class="progress mb-3">
+                        <div class="progress-bar"
+                             style="width: 68%;">
+                        </div>
+                    </div>
+
+                    <span class="badge bg-warning text-dark">
+                        Improvement Needed
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="competency-card">
+
+                    <div class="competency-icon mb-3">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+
+                    <h5>Python Programming</h5>
+
+                    <p class="text-muted">
+                        Python programming and problem-solving skills.
+                    </p>
+
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Average Competency</span>
+                        <strong>74%</strong>
+                    </div>
+
+                    <div class="progress mb-3">
+                        <div class="progress-bar"
+                             style="width: 74%;">
+                        </div>
+                    </div>
+
+                    <span class="badge bg-success">
+                        Good
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="competency-card">
+
+                    <div class="competency-icon mb-3">
+                        <i class="bi bi-chat-dots-fill"></i>
+                    </div>
+
+                    <h5>Communication</h5>
+
+                    <p class="text-muted">
+                        Professional communication and presentation skills.
+                    </p>
+
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Average Competency</span>
+                        <strong>85%</strong>
+                    </div>
+
+                    <div class="progress mb-3">
+                        <div class="progress-bar"
+                             style="width: 85%;">
+                        </div>
+                    </div>
+
+                    <span class="badge bg-success">
+                        Strong
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Trainee Competency Table -->
+        <div class="table-card">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+
+                <h4 class="mb-0">
+                    Trainee Competency Overview
+                </h4>
+
+                <input
+                    type="text"
+                    id="competencySearch"
+                    class="form-control"
+                    placeholder="Search trainee..."
+                    style="max-width: 250px;"
+                    onkeyup="searchTrainees()">
+
+            </div>
+
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle"
+                       id="competencyTable">
+
+                    <thead>
+
+                        <tr>
+                            <th>Trainee</th>
+                            <th>Data Analytics</th>
+                            <th>Python</th>
+                            <th>Communication</th>
+                            <th>Overall</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Arun Kumar</td>
+
+                            <td>82%</td>
+
+                            <td>78%</td>
+
+                            <td>88%</td>
+
+                            <td>
+                                <strong>83%</strong>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Strong
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>Swetha Kumar</td>
+
+                            <td>65%</td>
+
+                            <td>72%</td>
+
+                            <td>86%</td>
+
+                            <td>
+                                <strong>74%</strong>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    Improve
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>Priya M</td>
+
+                            <td>58%</td>
+
+                            <td>68%</td>
+
+                            <td>92%</td>
+
+                            <td>
+                                <strong>73%</strong>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    Skill Gap
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>Rahul S</td>
+
+                            <td>76%</td>
+
+                            <td>84%</td>
+
+                            <td>80%</td>
+
+                            <td>
+                                <strong>80%</strong>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Strong
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- Trainer Matching -->
+        <div class="table-card mt-4">
+
+            <h4 class="mb-3">
+                Trainer Matching
+            </h4>
+
+            <p class="text-muted">
+                Suitable trainers identified based on competency requirements.
+            </p>
+
+            <div class="table-responsive">
+
+                <table class="table table-hover">
+
+                    <thead>
+
+                        <tr>
+                            <th>Skill Area</th>
+                            <th>Recommended Trainer</th>
+                            <th>Match</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Data Analytics</td>
+
+                            <td>Analytics Trainer</td>
+
+                            <td>
+                                <strong>92%</strong>
+                            </td>
+
+                            <td>
+                                <button
+                                    class="btn btn-sm btn-outline-primary"
+                                    onclick="assignTrainer('Data Analytics')">
+                                    Assign
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>Python</td>
+
+                            <td>Python Trainer</td>
+
+                            <td>
+                                <strong>88%</strong>
+                            </td>
+
+                            <td>
+                                <button
+                                    class="btn btn-sm btn-outline-primary"
+                                    onclick="assignTrainer('Python')">
+                                    Assign
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>Communication</td>
+
+                            <td>Communication Trainer</td>
+
+                            <td>
+                                <strong>90%</strong>
+                            </td>
+
+                            <td>
+                                <button
+                                    class="btn btn-sm btn-outline-primary"
+                                    onclick="assignTrainer('Communication')">
+                                    Assign
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function searchTrainees() {
+
+            let input = document
+                .getElementById("competencySearch")
+                .value
+                .toLowerCase();
+
+            let rows = document
+                .getElementById("competencyTable")
+                .getElementsByTagName("tr");
+
+
+            for (let i = 1; i < rows.length; i++) {
+
+                let text =
+                    rows[i].textContent.toLowerCase();
+
+                rows[i].style.display =
+                    text.includes(input)
+                    ? ""
+                    : "none";
+
+            }
+
+        }
+
+
+        function assignTrainer(skill) {
+
+            alert(
+                "Trainer assigned for " + skill + " competency support."
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>

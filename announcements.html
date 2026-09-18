@@ -1,0 +1,547 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Announcements - CAPACITY CONNECT</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f4f7fb;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            min-height: 100vh;
+            background: #0d6efd;
+            color: white;
+            padding: 25px 15px;
+        }
+
+        .sidebar h3 {
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: rgba(255,255,255,0.18);
+        }
+
+        .sidebar i {
+            margin-right: 10px;
+        }
+
+        .main-content {
+            padding: 30px;
+        }
+
+        .stat-card,
+        .content-card {
+            background: white;
+            border-radius: 15px;
+            padding: 22px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .stat-icon {
+            font-size: 30px;
+        }
+
+        .announcement-card {
+            background: white;
+            border-radius: 15px;
+            padding: 22px;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-left: 5px solid #0d6efd;
+        }
+
+        .announcement-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .announcement-date {
+            color: #6c757d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Sidebar -->
+        <div class="col-md-3 col-lg-2 sidebar">
+
+            <h3>
+                <i class="bi bi-mortarboard-fill"></i>
+                CAPACITY CONNECT
+            </h3>
+
+            <a href="admin.html">
+                <i class="bi bi-speedometer2"></i>
+                Dashboard
+            </a>
+
+            <a href="user-management.html">
+                <i class="bi bi-people"></i>
+                User Management
+            </a>
+
+            <a href="course-management.html">
+                <i class="bi bi-book"></i>
+                Course Management
+            </a>
+
+            <a href="admin-assessments.html">
+                <i class="bi bi-clipboard-check"></i>
+                Assessments
+            </a>
+
+            <a href="certifications.html">
+                <i class="bi bi-award"></i>
+                Certifications
+            </a>
+
+            <a href="admin-competency.html">
+                <i class="bi bi-diagram-3"></i>
+                Competency Mapping
+            </a>
+
+            <a href="analytics.html">
+                <i class="bi bi-bar-chart"></i>
+                Analytics
+            </a>
+
+            <a href="announcements.html" class="active">
+                <i class="bi bi-megaphone"></i>
+                Announcements
+            </a>
+
+            <a href="notifications.html">
+                <i class="bi bi-bell"></i>
+                Notifications
+            </a>
+
+            <a href="login.html">
+                <i class="bi bi-box-arrow-right"></i>
+                Logout
+            </a>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9 col-lg-10 main-content">
+
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+
+                <div>
+                    <h2 class="fw-bold">Announcements</h2>
+                    <p class="text-muted mb-0">
+                        Create and manage training announcements
+                    </p>
+                </div>
+
+                <button class="btn btn-primary" onclick="openAnnouncementForm()">
+                    <i class="bi bi-plus-circle"></i>
+                    Create Announcement
+                </button>
+
+            </div>
+
+            <!-- Statistics -->
+            <div class="row g-4 mb-4">
+
+                <div class="col-md-4">
+                    <div class="stat-card">
+
+                        <div class="d-flex justify-content-between">
+
+                            <div>
+                                <p class="text-muted mb-1">
+                                    Total Announcements
+                                </p>
+
+                                <h3 class="fw-bold">12</h3>
+                            </div>
+
+                            <div class="stat-icon text-primary">
+                                <i class="bi bi-megaphone-fill"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="stat-card">
+
+                        <div class="d-flex justify-content-between">
+
+                            <div>
+                                <p class="text-muted mb-1">
+                                    Published
+                                </p>
+
+                                <h3 class="fw-bold">9</h3>
+                            </div>
+
+                            <div class="stat-icon text-success">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="stat-card">
+
+                        <div class="d-flex justify-content-between">
+
+                            <div>
+                                <p class="text-muted mb-1">
+                                    Drafts
+                                </p>
+
+                                <h3 class="fw-bold">3</h3>
+                            </div>
+
+                            <div class="stat-icon text-warning">
+                                <i class="bi bi-file-earmark-text-fill"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Search -->
+            <div class="content-card mb-4">
+
+                <div class="row g-3">
+
+                    <div class="col-md-8">
+                        <input
+                            type="text"
+                            id="searchAnnouncement"
+                            class="form-control"
+                            placeholder="Search announcements..."
+                            onkeyup="searchAnnouncements()">
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <select
+                            id="statusFilter"
+                            class="form-select"
+                            onchange="filterAnnouncements()">
+
+                            <option value="all">All Status</option>
+                            <option value="Published">Published</option>
+                            <option value="Draft">Draft</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Announcements -->
+            <div id="announcementList">
+
+                <div class="announcement-card"
+                     data-status="Published">
+
+                    <div class="d-flex justify-content-between align-items-start">
+
+                        <div>
+
+                            <div class="announcement-title">
+                                New Data Analytics Course Available
+                            </div>
+
+                            <div class="announcement-date mt-1">
+                                <i class="bi bi-calendar"></i>
+                                18 September 2026
+                            </div>
+
+                        </div>
+
+                        <span class="badge bg-success">
+                            Published
+                        </span>
+
+                    </div>
+
+                    <p class="mt-3 mb-3">
+                        A new Data Analytics training course is now
+                        available for all registered trainees.
+                    </p>
+
+                    <button
+                        class="btn btn-sm btn-outline-primary"
+                        onclick="viewAnnouncement('New Data Analytics Course Available')">
+                        <i class="bi bi-eye"></i>
+                        View
+                    </button>
+
+                    <button
+                        class="btn btn-sm btn-outline-warning"
+                        onclick="editAnnouncement('New Data Analytics Course Available')">
+                        <i class="bi bi-pencil"></i>
+                        Edit
+                    </button>
+
+                    <button
+                        class="btn btn-sm btn-outline-danger"
+                        onclick="deleteAnnouncement('New Data Analytics Course Available')">
+                        <i class="bi bi-trash"></i>
+                        Delete
+                    </button>
+
+                </div>
+
+
+                <div class="announcement-card"
+                     data-status="Published">
+
+                    <div class="d-flex justify-content-between align-items-start">
+
+                        <div>
+
+                            <div class="announcement-title">
+                                Assessment Schedule Updated
+                            </div>
+
+                            <div class="announcement-date mt-1">
+                                <i class="bi bi-calendar"></i>
+                                17 September 2026
+                            </div>
+
+                        </div>
+
+                        <span class="badge bg-success">
+                            Published
+                        </span>
+
+                    </div>
+
+                    <p class="mt-3 mb-3">
+                        The upcoming assessment schedule has been
+                        updated. Trainees can check their assessment
+                        dates from the Assessments section.
+                    </p>
+
+                    <button
+                        class="btn btn-sm btn-outline-primary"
+                        onclick="viewAnnouncement('Assessment Schedule Updated')">
+                        <i class="bi bi-eye"></i>
+                        View
+                    </button>
+
+                    <button
+                        class="btn btn-sm btn-outline-warning"
+                        onclick="editAnnouncement('Assessment Schedule Updated')">
+                        <i class="bi bi-pencil"></i>
+                        Edit
+                    </button>
+
+                    <button
+                        class="btn btn-sm btn-outline-danger"
+                        onclick="deleteAnnouncement('Assessment Schedule Updated')">
+                        <i class="bi bi-trash"></i>
+                        Delete
+                    </button>
+
+                </div>
+
+
+                <div class="announcement-card"
+                     data-status="Draft">
+
+                    <div class="d-flex justify-content-between align-items-start">
+
+                        <div>
+
+                            <div class="announcement-title">
+                                Trainer Workshop Registration
+                            </div>
+
+                            <div class="announcement-date mt-1">
+                                <i class="bi bi-calendar"></i>
+                                Draft
+                            </div>
+
+                        </div>
+
+                        <span class="badge bg-warning text-dark">
+                            Draft
+                        </span>
+
+                    </div>
+
+                    <p class="mt-3 mb-3">
+                        Registration details for the upcoming trainer
+                        workshop will be announced soon.
+                    </p>
+
+                    <button
+                        class="btn btn-sm btn-outline-primary"
+                        onclick="viewAnnouncement('Trainer Workshop Registration')">
+                        <i class="bi bi-eye"></i>
+                        View
+                    </button>
+
+                    <button
+                        class="btn btn-sm btn-outline-success"
+                        onclick="publishAnnouncement('Trainer Workshop Registration')">
+                        <i class="bi bi-send"></i>
+                        Publish
+                    </button>
+
+                    <button
+                        class="btn btn-sm btn-outline-danger"
+                        onclick="deleteAnnouncement('Trainer Workshop Registration')">
+                        <i class="bi bi-trash"></i>
+                        Delete
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+    function openAnnouncementForm() {
+        alert(
+            "Create Announcement\n\n" +
+            "Admin can add title, description, audience and publish date."
+        );
+    }
+
+
+    function viewAnnouncement(title) {
+        alert("Viewing Announcement:\n\n" + title);
+    }
+
+
+    function editAnnouncement(title) {
+        alert("Edit Announcement:\n\n" + title);
+    }
+
+
+    function deleteAnnouncement(title) {
+
+        const confirmDelete =
+            confirm("Delete this announcement?\n\n" + title);
+
+        if (confirmDelete) {
+            alert("Announcement deleted successfully!");
+        }
+
+    }
+
+
+    function publishAnnouncement(title) {
+
+        const confirmPublish =
+            confirm("Publish this announcement?\n\n" + title);
+
+        if (confirmPublish) {
+            alert("Announcement published successfully!");
+        }
+
+    }
+
+
+    function searchAnnouncements() {
+
+        const searchValue =
+            document.getElementById("searchAnnouncement")
+            .value
+            .toLowerCase();
+
+        const announcements =
+            document.querySelectorAll(".announcement-card");
+
+        announcements.forEach(function(card) {
+
+            const text =
+                card.innerText.toLowerCase();
+
+            if (text.includes(searchValue)) {
+                card.style.display = "block";
+            }
+            else {
+                card.style.display = "none";
+            }
+
+        });
+
+    }
+
+
+    function filterAnnouncements() {
+
+        const selectedStatus =
+            document.getElementById("statusFilter").value;
+
+        const announcements =
+            document.querySelectorAll(".announcement-card");
+
+        announcements.forEach(function(card) {
+
+            const status =
+                card.getAttribute("data-status");
+
+            if (
+                selectedStatus === "all" ||
+                status === selectedStatus
+            ) {
+                card.style.display = "block";
+            }
+            else {
+                card.style.display = "none";
+            }
+
+        });
+
+    }
+
+</script>
+
+</body>
+</html>
+```

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaires - CAPACITY CONNECT</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f5f7fb;
+        }
+
+        .topbar {
+            background: #ffffff;
+            padding: 18px 25px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .question-card {
+            transition: 0.2s;
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar d-flex justify-content-between align-items-center">
+        <div>
+            <h3 class="mb-1">
+                <i class="bi bi-question-circle"></i>
+                Questionnaires
+            </h3>
+            <small class="text-muted">Create and manage training questionnaires</small>
+        </div>
+
+        <a href="trainer.html" class="btn btn-outline-primary">
+            <i class="bi bi-arrow-left"></i> Back to Dashboard
+        </a>
+    </div>
+
+    <div class="container py-4">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4>My Questionnaires</h4>
+
+            <button class="btn btn-primary" onclick="createQuestionnaire()">
+                <i class="bi bi-plus-circle"></i>
+                Create Questionnaire
+            </button>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <div class="card question-card p-4">
+                    <div class="d-flex justify-content-between">
+                        <h5>Training Feedback</h5>
+                        <span class="badge bg-success">Active</span>
+                    </div>
+
+                    <p class="text-muted mt-2">
+                        Collect feedback from trainees after training sessions.
+                    </p>
+
+                    <div class="small text-muted mb-3">
+                        <i class="bi bi-question-circle"></i> 10 Questions
+                        &nbsp;&nbsp;
+                        <i class="bi bi-calendar"></i> Deadline: 25 Sep 2026
+                    </div>
+
+                    <button class="btn btn-outline-primary">
+                        <i class="bi bi-eye"></i> View
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card question-card p-4">
+                    <div class="d-flex justify-content-between">
+                        <h5>Course Evaluation</h5>
+                        <span class="badge bg-warning text-dark">Pending</span>
+                    </div>
+
+                    <p class="text-muted mt-2">
+                        Evaluate course quality, learning materials and trainer support.
+                    </p>
+
+                    <div class="small text-muted mb-3">
+                        <i class="bi bi-question-circle"></i> 8 Questions
+                        &nbsp;&nbsp;
+                        <i class="bi bi-calendar"></i> Deadline: 30 Sep 2026
+                    </div>
+
+                    <button class="btn btn-outline-primary">
+                        <i class="bi bi-eye"></i> View
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card question-card p-4">
+                    <div class="d-flex justify-content-between">
+                        <h5>Skill Assessment</h5>
+                        <span class="badge bg-info">Draft</span>
+                    </div>
+
+                    <p class="text-muted mt-2">
+                        Assess trainee knowledge and identify learning requirements.
+                    </p>
+
+                    <div class="small text-muted mb-3">
+                        <i class="bi bi-question-circle"></i> 12 Questions
+                        &nbsp;&nbsp;
+                        <i class="bi bi-calendar"></i> Not Published
+                    </div>
+
+                    <button class="btn btn-outline-primary">
+                        <i class="bi bi-pencil"></i> Edit
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card p-4 mt-5">
+            <h5 class="mb-3">
+                <i class="bi bi-bar-chart"></i>
+                Questionnaire Summary
+            </h5>
+
+            <div class="row text-center">
+
+                <div class="col-md-4">
+                    <h3>3</h3>
+                    <p class="text-muted">Total Questionnaires</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h3>18</h3>
+                    <p class="text-muted">Responses Received</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h3>82%</h3>
+                    <p class="text-muted">Average Feedback</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function createQuestionnaire() {
+            alert("Questionnaire creation feature will be available here.");
+        }
+    </script>
+
+</body>
+</html>

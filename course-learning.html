@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Course Learning - CAPACITY CONNECT</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background: #f4f7fb;
+            font-family: Arial, sans-serif;
+        }
+
+        .topbar {
+            background: white;
+            padding: 18px 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .course-header {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .course-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 15px;
+            background: #e8f1ff;
+            color: #0d6efd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+        }
+
+        .video-box {
+            height: 300px;
+            background: #e9ecef;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .video-box i {
+            font-size: 65px;
+            color: #0d6efd;
+        }
+
+        .module {
+            padding: 15px;
+            border: 1px solid #e1e5eb;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .module:hover {
+            background: #f4f8ff;
+        }
+
+        .module.active {
+            border-color: #0d6efd;
+            background: #eef5ff;
+        }
+
+        .progress {
+            height: 9px;
+        }
+
+        .btn-back {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+
+    <div class="container-fluid">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+                <h3 class="mb-1">
+                    <i class="bi bi-book text-primary"></i>
+                    Course Learning
+                </h3>
+
+                <small class="text-muted">
+                    CAPACITY CONNECT Learning Portal
+                </small>
+            </div>
+
+            <a href="courses.html" class="btn btn-outline-primary btn-back">
+                <i class="bi bi-arrow-left"></i>
+                My Courses
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- MAIN -->
+<div class="container py-4">
+
+    <!-- COURSE HEADER -->
+    <div class="course-header">
+
+        <div class="d-flex align-items-center gap-3">
+
+            <div class="course-icon">
+                <i class="bi bi-bar-chart-fill"></i>
+            </div>
+
+            <div>
+                <h2 class="mb-1">
+                    Data Analytics
+                </h2>
+
+                <p class="text-muted mb-0">
+                    Learn data analysis, visualization and basic analytics concepts.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="mt-4">
+
+            <div class="d-flex justify-content-between">
+                <span>Course Progress</span>
+                <strong>75%</strong>
+            </div>
+
+            <div class="progress mt-2">
+
+                <div class="progress-bar"
+                     style="width:75%;">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <!-- LEFT CONTENT -->
+        <div class="col-lg-8">
+
+            <div class="content-card">
+
+                <h4>
+                    Module 1: Introduction to Data Analytics
+                </h4>
+
+                <p class="text-muted">
+                    Learn the fundamentals of data analytics and understand
+                    how data can be used to support better decisions.
+                </p>
+
+
+                <!-- VIDEO -->
+                <div class="video-box mt-4">
+
+                    <i class="bi bi-play-circle-fill"></i>
+
+                    <h5 class="mt-3">
+                        Course Video
+                    </h5>
+
+                    <small class="text-muted">
+                        Video lesson placeholder
+                    </small>
+
+                </div>
+
+
+                <h5 class="mt-4">
+                    Learning Materials
+                </h5>
+
+                <div class="list-group">
+
+                    <div class="list-group-item">
+                        <i class="bi bi-file-earmark-text text-primary"></i>
+                        Introduction to Data Analytics
+                    </div>
+
+                    <div class="list-group-item">
+                        <i class="bi bi-file-earmark-pdf text-danger"></i>
+                        Data Analytics Study Notes
+                    </div>
+
+                    <div class="list-group-item">
+                        <i class="bi bi-file-earmark-ppt text-warning"></i>
+                        Data Visualization Presentation
+                    </div>
+
+                </div>
+
+
+                <div class="d-flex justify-content-between mt-4">
+
+                    <button class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="btn btn-primary">
+                        Mark as Completed
+                        <i class="bi bi-check-circle"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE DESCRIPTION -->
+            <div class="content-card">
+
+                <h4>
+                    About this Course
+                </h4>
+
+                <p>
+                    This course introduces learners to the basic concepts of
+                    data analytics, data visualization and analytical thinking.
+                </p>
+
+                <h5 class="mt-4">
+                    What you will learn
+                </h5>
+
+                <ul>
+                    <li>Data Analytics Fundamentals</li>
+                    <li>Data Collection and Preparation</li>
+                    <li>Data Visualization</li>
+                    <li>Basic Statistical Concepts</li>
+                    <li>Analytical Decision Making</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="col-lg-4">
+
+            <div class="content-card">
+
+                <h4 class="mb-3">
+                    Course Modules
+                </h4>
+
+
+                <div class="module active">
+
+                    <div class="d-flex justify-content-between">
+
+                        <strong>
+                            Module 1
+                        </strong>
+
+                        <i class="bi bi-check-circle-fill text-success"></i>
+
+                    </div>
+
+                    <small class="text-muted">
+                        Introduction to Data Analytics
+                    </small>
+
+                </div>
+
+
+                <div class="module">
+
+                    <div class="d-flex justify-content-between">
+
+                        <strong>
+                            Module 2
+                        </strong>
+
+                        <i class="bi bi-lock text-secondary"></i>
+
+                    </div>
+
+                    <small class="text-muted">
+                        Data Collection & Preparation
+                    </small>
+
+                </div>
+
+
+                <div class="module">
+
+                    <div class="d-flex justify-content-between">
+
+                        <strong>
+                            Module 3
+                        </strong>
+
+                        <i class="bi bi-lock text-secondary"></i>
+
+                    </div>
+
+                    <small class="text-muted">
+                        Data Visualization
+                    </small>
+
+                </div>
+
+
+                <div class="module">
+
+                    <div class="d-flex justify-content-between">
+
+                        <strong>
+                            Module 4
+                        </strong>
+
+                        <i class="bi bi-lock text-secondary"></i>
+
+                    </div>
+
+                    <small class="text-muted">
+                        Basic Statistics
+                    </small>
+
+                </div>
+
+
+                <div class="module">
+
+                    <div class="d-flex justify-content-between">
+
+                        <strong>
+                            Module 5
+                        </strong>
+
+                        <i class="bi bi-lock text-secondary"></i>
+
+                    </div>
+
+                    <small class="text-muted">
+                        Final Assessment
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE INFO -->
+            <div class="content-card">
+
+                <h5>
+                    Course Information
+                </h5>
+
+                <hr>
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span>
+                        <i class="bi bi-clock"></i>
+                        Duration
+                    </span>
+
+                    <strong>
+                        12 Hours
+                    </strong>
+                </div>
+
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span>
+                        <i class="bi bi-collection"></i>
+                        Modules
+                    </span>
+
+                    <strong>
+                        5
+                    </strong>
+                </div>
+
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span>
+                        <i class="bi bi-bar-chart"></i>
+                        Level
+                    </span>
+
+                    <strong>
+                        Beginner
+                    </strong>
+                </div>
+
+
+                <div class="d-flex justify-content-between">
+                    <span>
+                        <i class="bi bi-award"></i>
+                        Certificate
+                    </span>
+
+                    <strong class="text-success">
+                        Available
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- ASSESSMENT -->
+            <div class="content-card">
+
+                <h5>
+                    <i class="bi bi-clipboard-check text-primary"></i>
+                    Course Assessment
+                </h5>
+
+                <p class="text-muted">
+                    Complete the assessment after finishing the course modules.
+                </p>
+
+                <a href="assessment.html" class="btn btn-primary w-100">
+                  Start Assessment
+                </a>
+                
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

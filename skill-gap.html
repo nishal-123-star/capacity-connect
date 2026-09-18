@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skill Gap - CAPACITY CONNECT</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f5f7fb;
+            font-family: Arial, sans-serif;
+        }
+
+        .topbar {
+            background: #0d6efd;
+            color: white;
+            padding: 20px 30px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .gap-card {
+            background: white;
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background: #e8f1ff;
+            color: #0d6efd;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+        }
+
+        .progress {
+            height: 10px;
+            border-radius: 10px;
+        }
+
+        .recommendation {
+            background: #e8f7ee;
+            border-left: 5px solid #198754;
+        }
+
+        .priority-high {
+            background: #f8d7da;
+            color: #842029;
+        }
+
+        .priority-medium {
+            background: #fff3cd;
+            color: #664d03;
+        }
+
+        .summary-number {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="topbar">
+        <div class="container">
+            <h3 class="mb-1">
+                <i class="bi bi-bar-chart-steps"></i>
+                Skill Gap Analysis
+            </h3>
+
+            <p class="mb-0">
+                Identify skill gaps and improve your competency level
+            </p>
+        </div>
+    </div>
+
+    <div class="container py-4">
+
+        <!-- Summary -->
+        <div class="row mb-4">
+
+            <div class="col-md-4 mb-3">
+                <div class="card p-4 text-center">
+                    <div class="summary-number text-primary">3</div>
+                    <div class="text-muted">Skills Assessed</div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card p-4 text-center">
+                    <div class="summary-number text-warning">2</div>
+                    <div class="text-muted">Skills Need Improvement</div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card p-4 text-center">
+                    <div class="summary-number text-success">1</div>
+                    <div class="text-muted">Strong Skill</div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Skill Gap Details -->
+        <div class="card p-4 mb-4">
+
+            <h4 class="mb-1">
+                <i class="bi bi-search"></i>
+                Identified Skill Gaps
+            </h4>
+
+            <p class="text-muted">
+                Your current competency levels compared with the expected level.
+            </p>
+
+
+            <!-- Data Analytics -->
+            <div class="gap-card">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="icon-box">
+                        <i class="bi bi-bar-chart"></i>
+                    </div>
+
+                    <div class="flex-grow-1">
+
+                        <div class="d-flex justify-content-between">
+                            <h5>Data Analytics</h5>
+
+                            <span class="badge priority-high">
+                                High Priority
+                            </span>
+                        </div>
+
+                        <p class="text-muted mb-2">
+                            Current Level: 55% | Expected Level: 80%
+                        </p>
+
+                        <div class="progress">
+                            <div class="progress-bar bg-danger"
+                                 style="width:55%">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Python -->
+            <div class="gap-card">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="icon-box">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+
+                    <div class="flex-grow-1">
+
+                        <div class="d-flex justify-content-between">
+                            <h5>Python Programming</h5>
+
+                            <span class="badge priority-medium">
+                                Medium Priority
+                            </span>
+                        </div>
+
+                        <p class="text-muted mb-2">
+                            Current Level: 70% | Expected Level: 85%
+                        </p>
+
+                        <div class="progress">
+                            <div class="progress-bar bg-warning"
+                                 style="width:70%">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Communication -->
+            <div class="gap-card">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="icon-box">
+                        <i class="bi bi-chat-dots"></i>
+                    </div>
+
+                    <div class="flex-grow-1">
+
+                        <div class="d-flex justify-content-between">
+                            <h5>Communication Skills</h5>
+
+                            <span class="badge bg-success">
+                                Strong
+                            </span>
+                        </div>
+
+                        <p class="text-muted mb-2">
+                            Current Level: 85% | Expected Level: 80%
+                        </p>
+
+                        <div class="progress">
+                            <div class="progress-bar bg-success"
+                                 style="width:85%">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Recommended Learning -->
+        <div class="card p-4 mb-4">
+
+            <h4>
+                <i class="bi bi-lightbulb"></i>
+                Recommended Learning
+            </h4>
+
+            <p class="text-muted">
+                Learning suggestions based on your identified skill gaps.
+            </p>
+
+
+            <div class="gap-card recommendation">
+
+                <h5>
+                    <i class="bi bi-book"></i>
+                    Advanced Data Analytics
+                </h5>
+
+                <p>
+                    Learn data visualization, statistical analysis
+                    and analytical techniques.
+                </p>
+
+                <span class="badge bg-success">
+                    Recommended
+                </span>
+
+            </div>
+
+
+            <div class="gap-card recommendation">
+
+                <h5>
+                    <i class="bi bi-code-square"></i>
+                    Python for Data Analysis
+                </h5>
+
+                <p>
+                    Improve Python programming skills for
+                    data processing and analytics.
+                </p>
+
+                <span class="badge bg-success">
+                    Recommended
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Improvement Plan -->
+        <div class="card p-4 mb-4">
+
+            <h4>
+                <i class="bi bi-graph-up-arrow"></i>
+                Improvement Plan
+            </h4>
+
+            <div class="table-responsive mt-3">
+
+                <table class="table align-middle">
+
+                    <thead>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Current</th>
+                            <th>Target</th>
+                            <th>Gap</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Data Analytics</td>
+                            <td>55%</td>
+                            <td>80%</td>
+                            <td>25%</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm">
+                                    Start Course
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Python</td>
+                            <td>70%</td>
+                            <td>85%</td>
+                            <td>15%</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm">
+                                    Start Course
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- Back -->
+        <div class="text-center">
+
+            <a href="trainee.html" class="btn btn-primary">
+                <i class="bi bi-arrow-left"></i>
+                Back to Dashboard
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
