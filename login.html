@@ -324,84 +324,50 @@
 
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
 
     let selectedRole = "";
 
-
     function selectRole(role, element) {
-
         selectedRole = role;
-
         document.getElementById("selectedRole").value = role;
 
-        // Remove selected class from all roles
-        document.querySelectorAll(".role-card")
-            .forEach(card => {
-                card.classList.remove("selected");
-            });
-
-        // Add selected class
-        element.classList.add("selected");
-
-    }
-
-
-    document.getElementById("loginForm")
-        .addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            const email =
-                document.getElementById("email").value;
-
-            const password =
-                document.getElementById("password").value;
-
-
-            if (selectedRole === "") {
-
-                alert("Please select your role.");
-
-                return;
-
-            }
-
-
-            if (email === "" || password === "") {
-
-                alert("Please enter email and password.");
-
-                return;
-
-            }
-
-
-           // Redirect user based on selected role
-
-if (selectedRole === "Trainee") {
-    window.location.href = "trainee.html";
-}
-
-else if (selectedRole === "Trainer") {
-    window.location.href = "trainer.html";
-}
-
-else if (selectedRole === "Admin") {
-    window.location.href = "admin.html";
-}
-
-
-            // Dashboard will be connected later
-            console.log(
-                "Logged in as:",
-                selectedRole,
-                email
-            );
-
+        document.querySelectorAll(".role-card").forEach(card => {
+            card.classList.remove("selected");
         });
 
-</script>
+        element.classList.add("selected");
+    }
 
+    window.selectRole = selectRole;
+
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+
+        if (selectedRole === "") {
+            alert("Please select your role.");
+            return;
+        }
+
+        if (email === "" || password === "") {
+            alert("Please enter email and password.");
+            return;
+        }
+
+        if (selectedRole === "Trainee") {
+            window.location.href = "trainee.html";
+        } else if (selectedRole === "Trainer") {
+            window.location.href = "trainer.html";
+        } else if (selectedRole === "Admin") {
+            window.location.href = "admin.html";
+        }
+    });
+
+});
+</script>
 
 </body>
 </html>
