@@ -463,6 +463,24 @@
     </div>
 
 </div>
+<script>
+const params = new URLSearchParams(window.location.search);
+const course = params.get("course");
 
+if (course === "communication") {
+
+    document.querySelector("h2").textContent =
+        "Communication Skills";
+
+    document.querySelector(".text-muted.mb-0").textContent =
+        "Learn effective communication, presentation and professional speaking skills.";
+
+    document.querySelector("h4").textContent =
+        "Module 1: Introduction to Communication Skills";
+
+    document.querySelector("h4").nextElementSibling.textContent =
+        "Learn the fundamentals of communication and improve your professional speaking and interaction skills.";
+}
+</script>
 </body>
 </html>
